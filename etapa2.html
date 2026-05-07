@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>2</title>
+</head>
+<body>
+
+    <div>
+
+        <h3>Questão 2</h3>
+
+        <p>Qual a função da tag div?</p>
+        <button onclick="responder(true)">Agrupar elementos</button>
+        <button onclick="responder(false)">Criar um paragrafo</button>
+    
+    </div>
+
+
+
+
+
+    <script>
+        // Captura os pontos da URL anterior
+    const params = new URLSearchParams(window.location.search);
+    let pontosAtuais = parseInt(params.get('pts')) || 0;
+
+    function responder(correto) {
+        let novosPontos = correto ? pontosAtuais + 1 : pontosAtuais;
+            // Redireciona para a próxima etapa (ex: etapa3.html)
+        window.location.href = "etapa3.html?pts=" + novosPontos;
+    }
+    </script>
+
+</body>
+</html>
