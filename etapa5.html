@@ -8,19 +8,18 @@
     <title>Resultado</title>
 </head>
 <body>
-    
+    <h1>Questionário HTML</h1>    
     <div>
         <h1>Seu Resultado</h1>
-        <h2 id="exibir-nota"></h2>
+        <h2 id="exibir-nota"></h2><br>
+        <a href="etapa1.html">Tentar novamente</a>
     </div>
     
     <script>
         const params = new URLSearchParams(window.location.search);
         const nota = params.get('pts') || 0;
         document.getElementById('exibir-nota').innerText = "Você fez " + nota + "pontos!";
-    </script>
-
-    <a href="etapa1.html">Tentar novamente</a>
+    </script> 
     
 </body>
 </body>
